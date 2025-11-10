@@ -102,7 +102,7 @@ spec:
             - name: OTEL_EXPORTER_OTLP_TRACES_INSECURE
               value: {{ .Values.otel.tracing.exporter.otlp.insecure | quote }}
             - name: AUTOGEN_DISABLE_RUNTIME_TRACING
-              value: "true"
+              value: "false"
           {{- with .Values.app.env }}
             {{- toYaml . | nindent 12 }}
           {{- end }}
